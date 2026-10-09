@@ -62,7 +62,7 @@
 
 | Clase | Rol | Función |
 |---|---|---|
-| <span style="color:#ecfeff;">■</span>`ProcesadorPago` | Creadora (abstracta) | Contiene el flujo común `procesar()` (crear pasarela, mostrar el cobro, cobrar, informar). Declara el método fábrica abstracto `crearPasarela()`. |
+| `ProcesadorPago` | Creadora (abstracta) | Contiene el flujo común `procesar()` (crear pasarela, mostrar el cobro, cobrar, informar). Declara el método fábrica abstracto `crearPasarela()`. |
 | `ProcesadorTarjeta` / `ProcesadorPSE` / `ProcesadorEfectivo` / `ProcesadorNequi` | Creadoras concretas | Sobrescriben `crearPasarela()` para devolver la pasarela de su medio de pago. No tienen más lógica. |
 | `PasarelaPago` | Producto (interfaz) | Contrato común de todas las pasarelas: `nombre()` y `cobrar(monto)`. Permite que `ProcesadorPago` trabaje sin conocer la pasarela concreta. |
 | `PasarelaTarjeta` / `PasarelaPSE` / `PasarelaEfectivo` / `PasarelaNequi` | Productos concretos | Implementan la regla de aprobación de cada medio: Tarjeta ≤ 500000, Nequi ≤ 300000, PSE y Efectivo siempre aprueban. |
@@ -103,7 +103,7 @@
 
 - **Responsabilidad:** con `static` en `Pedido`, la clase mezcla "ser un pedido" con "llevar la numeración". El Singleton separa esa responsabilidad en su propia clase.
 - **Reutilización:** si otra clase necesita numerar (facturas, por ejemplo), tendría que depender de `Pedido`. El generador se reutiliza tal cual.
-- **Control de creación:** el Singleton es un objeto, así que puede crearse de forma perezosa, implementar una interfaz o reemplazarse en pruebas. Una variable `static` no.
+- **Control de creación:** el Singleton es un objeto, así que puede crearse de manera sencilla, implementar una interfaz o reemplazarse en pruebas. Una variable `static` no.
 
 ### 2. Si dos hilos llaman a `obtenerInstancia()` al mismo tiempo la primera vez, ¿qué podría salir mal? ¿Cómo lo resolverían?
 
