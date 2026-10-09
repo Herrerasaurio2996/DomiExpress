@@ -41,7 +41,7 @@
 # Diccionario de Clases y Roles del Sistema
 
 <p align="center">
-  <img src="Diagrama DomiExpress.drawio.png" alt="Diagrama de Clases DomiExpress" width="100%">
+  <img src="Imagenes/Diagrama DomiExpress.drawio.png" alt="Diagrama de Clases DomiExpress" width="100%">
 </p>
 
 
@@ -84,13 +84,13 @@
 # Captura de la salida de `App` y `AppBonus`
 
 <p align="center">
-  <img src="SalidaApp.png" alt="Salida App" width="100%">
+  <img src="Imagenes/SalidaApp.png" alt="Salida App" width="100%">
 </p>
 
 ---
 
 <p align="center">
-  <img src="SalidaAppBonus.png" alt="Salida App Bonus" width="100%">
+  <img src="Imagenes/SalidaAppBonus.png" alt="Salida App Bonus" width="100%">
 </p>
 
 ## Preguntas para la sustentación
