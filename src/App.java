@@ -57,21 +57,23 @@ public class App {
         System.out.println();
         System.out.println("=== 3. Factory Method: medios de pago ===");
 
+        
         ProcesadorPago tarjeta = new ProcesadorTarjeta();
         ProcesadorPago pse = new ProcesadorPSE();
         ProcesadorPago efectivo = new ProcesadorEfectivo();
-
+        
         tarjeta.procesar(p1);
         efectivo.procesar(p2);
         tarjeta.procesar(p3);   // supera el limite de la tarjeta
         pse.procesar(p3);       // PSE si lo aprueba
+        
 
-        // INICIO PUNTO 4 (descomenta cuando hayas creado ProcesadorNequi)
-        // System.out.println();
-        // System.out.println("=== 4. Extension sin modificar codigo existente ===");
-        // ProcesadorPago nequi = new ProcesadorNequi();
-        // nequi.procesar(p2);
-        // nequi.procesar(p3);
-        // FIN PUNTO 4
+        //INICIO PUNTO 4 (descomenta cuando hayas creado ProcesadorNequi)
+        System.out.println();
+        System.out.println("=== 4. Extension sin modificar codigo existente ===");
+        ProcesadorPago nequi = new ProcesadorNequi();
+        nequi.procesar(p2);
+        nequi.procesar(p3);
+        //FIN PUNTO 4
     }
 }

@@ -9,13 +9,15 @@ public class GeneradorConsecutivo {
     private GeneradorConsecutivo() {
         
         this.numero = 0;
-        System.out.println("Creando la unica instancia de GeneradorConsecutivo...");
+        System.out.println("[Consecutivo] Instancia creada.");
 
     }
 
     public static GeneradorConsecutivo obtenerInstancia() {
 
-        if(contador == null) {return new GeneradorConsecutivo();
+        if(contador == null) {
+            
+            contador = new GeneradorConsecutivo();
 
         }
 
@@ -23,11 +25,9 @@ public class GeneradorConsecutivo {
 
     }
 
-    // Metodo para aumentar el numero del pedido
-    public int siguienteNumero() {
-
-        ++numero;
-        return numero;
-
-    }
+    // Metodo para aumentar el numero del pedido, cumpliendo con el formato requerido
+    public String siguiente() {
+    numero++;
+    return String.format("PED-%04d", numero);
+}
 }
